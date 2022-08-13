@@ -1,0 +1,4 @@
+blocklist heatmap
+blocklist goog_touch_interface
+blocklist goodix_brl_touch
+blocklist syna_touch

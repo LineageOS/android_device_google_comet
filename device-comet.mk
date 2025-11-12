@@ -29,8 +29,6 @@ include device/google/comet/uwb/uwb_calibration.mk
 
 DEVICE_PACKAGE_OVERLAYS += device/google/comet/comet/overlay
 
-USE_AUDIO_HAL_AIDL := true
-
 include device/google/comet/audio/comet/audio-tables.mk
 include device/google/zumapro/device-shipping-common.mk
 include device/google/gs-common/bcmbt/bluetooth.mk
@@ -211,36 +209,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.app.audio.gsenet.version=1
 
-# Keymaster HAL
-#LOCAL_KEYMASTER_PRODUCT_PACKAGE ?= android.hardware.keymaster@4.1-service
-
-# Gatekeeper HAL
-#LOCAL_GATEKEEPER_PRODUCT_PACKAGE ?= android.hardware.gatekeeper@1.0-service.software
-
-
-# Gatekeeper
-# PRODUCT_PACKAGES += \
-# 	android.hardware.gatekeeper@1.0-service.software
-
-# Keymint replaces Keymaster
-# PRODUCT_PACKAGES += \
-# 	android.hardware.security.keymint-service
-
-# Keymaster
-#PRODUCT_PACKAGES += \
-#	android.hardware.keymaster@4.0-impl \
-#	android.hardware.keymaster@4.0-service
-
-#PRODUCT_PACKAGES += android.hardware.keymaster@4.0-service.remote
-#PRODUCT_PACKAGES += android.hardware.keymaster@4.1-service.remote
-#LOCAL_KEYMASTER_PRODUCT_PACKAGE := android.hardware.keymaster@4.1-service
-#LOCAL_KEYMASTER_PRODUCT_PACKAGE ?= android.hardware.keymaster@4.1-service
-
-# PRODUCT_PROPERTY_OVERRIDES += \
-# 	ro.hardware.keystore_desede=true \
-# 	ro.hardware.keystore=software \
-# 	ro.hardware.gatekeeper=software
-
 # PowerStats HAL
 PRODUCT_SOONG_NAMESPACES += \
     device/google/comet/powerstats/comet
@@ -391,11 +359,6 @@ PRODUCT_PRODUCT_PROPERTIES += \
 PRODUCT_PRODUCT_PROPERTIES += \
     persist.bluetooth.leaudio.allow_list=SM-R510,WF-1000XM5,SM-R630
 
-SUPPORT_VENDOR_SATELLITE_SERVICE := true
-
-# Support NTN(satellite) with dual SIM
-NTN_DUAL_SIM := true
-
 # Telephony Satellite Feature
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.telephony.satellite.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/android.hardware.telephony.satellite.xml
@@ -407,10 +370,6 @@ endif
 
 PRODUCT_COPY_FILES += \
 	$(TARGET_VENDOR_BATTERY_MITIGATION_CONFIG_PATH)/bm_config_comet.json:$(TARGET_COPY_OUT_VENDOR)/etc/bm_config.json
-
-# Exynos RIL and telephony
-# Support RIL Domain-selection
-SUPPORT_RIL_DOMAIN_SELECTION := true
 
 # Connectivity Resources Overlay for Thread host settings
 PRODUCT_PACKAGES += \

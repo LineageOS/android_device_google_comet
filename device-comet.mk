@@ -76,7 +76,6 @@ PRODUCT_COPY_FILES += \
 	frameworks/native/data/etc/android.hardware.nfc.ese.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.nfc.ese.xml
 
 PRODUCT_PACKAGES += \
-	Tag \
 	android.hardware.nfc-service.st \
 	NfcOverlayComet
 
@@ -87,10 +86,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
 	frameworks/native/data/etc/android.hardware.se.omapi.ese.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.se.omapi.ese.xml \
 	frameworks/native/data/etc/android.hardware.se.omapi.uicc.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.se.omapi.uicc.xml
-
-#Thermal VT estimator
-PRODUCT_PACKAGES += \
-    libthermal_tflite_wrapper
 
 # Thermal Config
 PRODUCT_PACKAGES += \
@@ -133,11 +128,6 @@ PRODUCT_PRODUCT_PROPERTIES += \
 # POF
 PRODUCT_PRODUCT_PROPERTIES += \
     ro.bluetooth.finder.supported=true
-
-# Spatial Audio
-PRODUCT_PACKAGES += \
-	libspatialaudio \
-	librondo
 
 # declare use of spatial audio
 PRODUCT_PROPERTY_OVERRIDES += \

@@ -53,6 +53,9 @@ PRODUCT_PACKAGES += \
     TelecomOverlayProductComet \
     WifiOverlay2024Mid_CT3
 
+PRODUCT_PACKAGES += \
+    ApertureOverlayComet
+
 # Properties
 TARGET_PRODUCT_PROP += $(DEVICE_PATH)/$(DEVICE_CODENAME)/product.prop
 TARGET_VENDOR_PROP += $(DEVICE_PATH)/$(DEVICE_CODENAME)/vendor.prop

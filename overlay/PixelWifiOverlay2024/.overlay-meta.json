@@ -1,0 +1,10 @@
+{
+    "device": "comet",
+    "devices": [
+        "comet"
+    ],
+    "original_device": "comet",
+    "original_name": "PixelWifiOverlay2024",
+    "original_package": "com.google.android.wifi.resources.pixel",
+    "original_target_package": "com.google.android.wifi.resources"
+}

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     SPDX-FileCopyrightText: The LineageOS Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<resources>
+    <!-- Use a two-pane face enrollment layout on unfolded screens -->
+    <bool name="config_use_face_enroll_2panes_layout">true</bool>
+</resources>

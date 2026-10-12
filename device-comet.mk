@@ -33,6 +33,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     ConnectivityResourcesOverlayCometOverride \
     DMServiceOverlayVendorComet \
+    FaceEnrollCometOverlay \
     FrameworkResOverlayProductComet \
     FrameworkResOverlayVendorComet \
     GRilServiceOverlay_CT3 \
